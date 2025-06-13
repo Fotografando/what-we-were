@@ -1,25 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
-    <title>What we Were (Song)</title>
+    <title>Per quello che siamo stati</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
       body {
         margin: 0;
         background-color: #000;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
         height: 100vh;
+        text-align: center;
+        padding: 0 20px;
       }
-      iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
+      h1 {
+        font-size: 2em;
+        font-weight: 600;
+        margin-bottom: 0.4em;
+      }
+      p {
+        font-size: 1.1em;
+        margin-bottom: 2em;
+        max-width: 600px;
+        line-height: 1.6em;
+      }
+      a.button {
+        display: inline-block;
+        padding: 14px 28px;
+        margin: 10px;
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 1em;
+        transition: all 0.3s ease;
+      }
+      a.button:hover {
+        background-color: #ccc;
+        color: #000;
       }
     </style>
   </head>
   <body>
-    <iframe src="https://player.vimeo.com/video/1093097731?h=8bd574a60d&autoplay=1&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <h1>Per quello che siamo stati</h1>
+    <p>
+      In questa pagina trovi tutto quello che non sono riuscito a dire a voce.<br>
+      Un video. Un libro. Un ricordo da portare con te.
+    </p>
+    <a class="button" href="https://player.vimeo.com/video/1093097731?h=8bd574a60d&autoplay=1&title=0&byline=0&portrait=0" target="_blank">Guarda il video</a>
+    <a class="button" href="https://github.com/fotografando/what-we-were/raw/main/Per_Quello_Che_Siamo_Stati.pdf" target="_blank">Scarica il libro</a>
+    <a class="button" href="https://we.tl/t-cuwUJETBbc" target="_blank">Scarica il video</a>
   </body>
 </html>
