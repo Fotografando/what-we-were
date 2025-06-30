@@ -59,12 +59,13 @@
       .buttons {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 14px;
         align-items: center;
+        width: 100%;
       }
 
       a.button {
-        display: inline-block;
+        display: block;
         padding: 14px 28px;
         background-color: #fff;
         color: #000;
@@ -73,18 +74,13 @@
         font-weight: 600;
         font-size: 1em;
         transition: all 0.3s ease;
-        min-width: 250px;
+        width: 100%;
+        max-width: 320px;
         text-align: center;
       }
 
       a.button:hover {
         background-color: #ccc;
-      }
-
-      @media (min-width: 600px) {
-        .buttons {
-          flex-direction: column;
-        }
       }
     </style>
   </head>
