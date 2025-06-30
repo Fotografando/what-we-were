@@ -7,28 +7,49 @@
     <style>
       body {
         margin: 0;
-        background-color: #000;
-        color: #fff;
         font-family: 'Montserrat', sans-serif;
+        height: 100vh;
+        background-image: url('cover.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #fff;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh;
         text-align: center;
         padding: 0 20px;
+        background-color: black;
       }
+
+      /* Overlay per rendere leggibile il testo */
+      body::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+      }
+
+      h1, p, a.button {
+        position: relative;
+        z-index: 1;
+      }
+
       h1 {
         font-size: 2em;
         font-weight: 600;
         margin-bottom: 0.4em;
       }
+
       p {
         font-size: 1.1em;
         margin-bottom: 2em;
         max-width: 600px;
         line-height: 1.6em;
       }
+
       a.button {
         display: inline-block;
         padding: 14px 28px;
@@ -41,9 +62,9 @@
         font-size: 1em;
         transition: all 0.3s ease;
       }
+
       a.button:hover {
         background-color: #ccc;
-        color: #000;
       }
     </style>
   </head>
