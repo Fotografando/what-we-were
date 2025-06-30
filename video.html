@@ -86,27 +86,6 @@
         border: none;
       }
 
-      .back-home {
-        display: none;
-        position: absolute;
-        bottom: 15px;
-        left: 0;
-        right: 0;
-        text-align: center;
-        z-index: 4;
-        font-size: 0.9em;
-      }
-
-      .back-home a {
-        color: #ccc;
-        text-decoration: none;
-        font-style: italic;
-      }
-
-      .back-home a:hover {
-        text-decoration: underline;
-      }
-
       @keyframes fadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
@@ -120,7 +99,6 @@
         const container = document.querySelector('.video-container');
         container.style.display = 'block';
         container.innerHTML = '<iframe src="https://www.youtube.com/embed/7P51CxOfKGs?autoplay=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
-        document.querySelector('.back-home').style.display = 'block';
       }
     </script>
   </head>
@@ -132,8 +110,5 @@
       <div class="subtitle">Il suono delle cose che non siamo riusciti a dire.</div>
     </div>
     <div class="video-container"></div>
-    <div class="back-home">
-      <a href="index.html">Torna alla pagina iniziale</a>
-    </div>
   </body>
 </html>
