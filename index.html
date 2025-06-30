@@ -7,131 +7,71 @@
     <title>Per quello che siamo stati</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
-      * {
-        box-sizing: border-box;
-      }
-      html, body {
+      body {
         margin: 0;
-        padding: 0;
         font-family: 'Montserrat', sans-serif;
-        height: 100vh;
-        background-color: black;
-        overflow: hidden;
-      }
-
-      .cover {
-        position: absolute;
-        inset: 0;
-        background-image: url('video_cover.jpg');
+        background-image: url('cover_web.jpg');
         background-size: cover;
         background-position: center;
-        z-index: 0;
-      }
-
-      .overlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-      }
-
-      .content {
-        position: relative;
-        z-index: 2;
-        padding: 20px;
-        color: white;
+        background-repeat: no-repeat;
+        height: 100vh;
+        color: #fff;
+        text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        height: 100vh;
-        text-align: center;
+        align-items: center;
+        padding: 0 20px;
+        position: relative;
       }
-
+      body::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 0;
+      }
+      .content {
+        position: relative;
+        z-index: 1;
+      }
       h1 {
         font-size: 2em;
-        margin-bottom: 0.5em;
-      }
-
-      button {
-        padding: 14px 28px;
-        margin: 20px 0;
-        background-color: #fff;
-        color: #000;
-        border: none;
-        border-radius: 30px;
         font-weight: 600;
-        font-size: 1em;
-        cursor: pointer;
-        transition: all 0.3s ease;
+        margin-bottom: 0.4em;
       }
-
-      button:hover {
-        background-color: #ccc;
+      p {
+        font-size: 1.1em;
+        margin-bottom: 2em;
+        max-width: 600px;
+        line-height: 1.6em;
       }
-
-      .links a {
+      a.button {
         display: inline-block;
-        padding: 12px 24px;
-        margin: 5px;
+        padding: 14px 28px;
+        margin: 10px;
         background-color: #fff;
         color: #000;
         text-decoration: none;
         border-radius: 30px;
         font-weight: 600;
-        font-size: 0.95em;
+        font-size: 1em;
         transition: all 0.3s ease;
       }
-
-      .links a:hover {
+      a.button:hover {
         background-color: #ccc;
       }
-
-      .video-container {
-        display: none;
-        position: absolute;
-        inset: 0;
-        z-index: 3;
-      }
-
-      .video-container iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-
-      @media (max-width: 600px) {
-        h1 {
-          font-size: 1.5em;
-        }
-        button, .links a {
-          font-size: 0.9em;
-          padding: 12px 20px;
-        }
-      }
     </style>
-    <script>
-      function playVideo() {
-        document.querySelector('.cover').style.display = 'none';
-        document.querySelector('.overlay').style.display = 'none';
-        document.querySelector('.content').style.display = 'none';
-        const container = document.querySelector('.video-container');
-        container.style.display = 'block';
-        container.innerHTML = '<iframe src="https://player.vimeo.com/video/956175039?autoplay=1" allow="autoplay; fullscreen" allowfullscreen></iframe>';
-      }
-    </script>
   </head>
   <body>
-    <div class="cover"></div>
-    <div class="overlay"></div>
     <div class="content">
-      <h1>What We Were</h1>
-      <button onclick="playVideo()">Guarda il VideoClip</button>
-      <div class="links">
-        <a href="https://github.com/fotografando/what-we-were/raw/main/Per_Quello_Che_Siamo_Stati.pdf" target="_blank">Scarica il libro in PDF</a>
-        <a href="https://we.tl/t-F8VhWQsE2N" target="_blank">Scarica il Video</a>
-      </div>
+      <h1>Per quello che siamo stati</h1>
+      <p>
+        In questa pagina trovi tutto quello che non sono riuscito a dire a voce: Un video musicale. Un libro. Un ricordo da portare con te.
+      </p>
+      <a class="button" href="video.html">Guarda il VideoClip</a>
+      <a class="button" href="https://github.com/fotografando/what-we-were/raw/main/Per_Quello_Che_Siamo_Stati.pdf" target="_blank">Scarica il libro in formato PDF</a>
+      <a class="button" href="https://we.tl/t-F8VhWQsE2N" target="_blank">Scarica il Video per averlo con te</a>
     </div>
-    <div class="video-container"></div>
   </body>
 </html>
